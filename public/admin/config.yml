@@ -10,10 +10,11 @@ collections:
     label: Blog
     folder: src/content/blog
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: Publish Date, name: publishedDate, widget: datetime }
+      - { label: "Publish Date", name: publishedDate, widget: datetime, format: "YYYY-MM-DD" }
       - { label: Author, name: author, widget: string, default: "Admin CetakYasin" }
-      - { label: Featured Image, name: image, widget: image }
+      - { label: "Featured Image", name: image, widget: image, media_folder: "/public/images/blog", public_folder: "/images/blog" }
       - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Body, name: body, widget: markdown }
+      - { label: "Body", name: body, widget: markdown }
