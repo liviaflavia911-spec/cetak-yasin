@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: liviaflavia911-spec/cetak-yasin
+  name: git-gateway
   branch: main
   auth_endpoint: api/auth # Astro site authentication endpoint
 
