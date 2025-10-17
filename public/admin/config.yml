@@ -4,7 +4,6 @@ backend:
   branch: main
   use_graphql: false
   auth_type: token
-  token_endpoint: https://cetak-yasin.pages.dev/api/auth
 
 media_folder: "public/images/blog"
 public_folder: "/images/blog"
