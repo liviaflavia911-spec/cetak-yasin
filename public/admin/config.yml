@@ -1,23 +1,23 @@
 backend:
   name: github
-  repo: liviaflavia911-spec/cetak-yasin
+  repo: liviaflavia911-spec/cetak-yasin   # ganti sesuai repo kamu
   branch: main
   use_graphql: false
-  auth_type: token   # pakai GitHub PAT, bukan Netlify OAuth
+  auth_type: token   # pakai GitHub PAT (bukan Netlify OAuth)
 
-media_folder: public/images/blog
-public_folder: /images/blog
+media_folder: "public/images/blog"    # tempat file di dalam repo
+public_folder: "/images/blog"         # path publik di website
 
 collections:
-  - name: blog
-    label: Blog
-    folder: src/content/blog
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: "Publish Date", name: publishedDate, widget: datetime, format: "YYYY-MM-DD", time_24hr: true }
-      - { label: Author, name: author, widget: string, default: "Admin CetakYasin" }
-      - { label: "Featured Image", name: image, widget: image }
-      - { label: Excerpt, name: excerpt, widget: text }
-      - { label: "Body", name: body, widget: markdown }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "publishedDate", widget: "datetime", format: "YYYY-MM-DD", time_24hr: true }
+      - { label: "Author", name: "author", widget: "string", default: "Admin CetakYasin" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
