@@ -4,8 +4,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
     integrations: [tailwind()],
-    output: 'server',
-    adapter: cloudflare(),
+    output: 'static',
     image: {
         service: {
             entrypoint: 'astro/assets/services/sharp'
