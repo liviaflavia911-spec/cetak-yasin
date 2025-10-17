@@ -2,13 +2,7 @@ backend:
   name: github
   repo: liviaflavia911-spec/cetak-yasin
   branch: main
-  commit_messages:
-    create: 'Create {{collection}} "{{slug}}"'
-    update: 'Update {{collection}} "{{slug}}"'
-    delete: 'Delete {{collection}} "{{slug}}"'
-    uploadMedia: 'Upload "{{path}}"'
-    deleteMedia: 'Delete "{{path}}"'
-  auth_endpoint: api/auth # Astro site authentication endpoint
+  use_graphql: false
 
 media_folder: public/images/blog
 public_folder: /images/blog
@@ -21,8 +15,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: Title, name: title, widget: string }
-      - { label: "Publish Date", name: publishedDate, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: "Publish Date", name: publishedDate, widget: datetime, format: "YYYY-MM-DD", time_24hr: true }
       - { label: Author, name: author, widget: string, default: "Admin CetakYasin" }
-      - { label: "Featured Image", name: image, widget: image, media_folder: "/public/images/blog", public_folder: "/images/blog" }
+      - { label: "Featured Image", name: image, widget: image, media_folder: "images/blog", public_folder: "/images/blog" }
       - { label: Excerpt, name: excerpt, widget: text }
       - { label: "Body", name: body, widget: markdown }
