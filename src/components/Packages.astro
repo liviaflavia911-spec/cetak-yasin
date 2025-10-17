@@ -1,0 +1,52 @@
+---
+const packages = [
+  {
+    title: "Buku Yasin",
+    items: ["Cover custom", "Kertas HVS", "Ukuran A6", "Cetak full color"]
+  },
+  {
+    title: "Souvenir",
+    items: ["Tasbih", "Mika box", "Kartu ucapan", "Packaging rapi"]
+  }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+      Paket Buku Yasin & Souvenir Lengkap
+    </h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Dapatkan paket lengkap dengan harga spesial
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {packages.map(pkg => (
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            {pkg.title}
+          </h3>
+          <ul class="space-y-3">
+            {pkg.items.map(item => (
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-teal-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a 
+        href="https://wa.me/6289519865963"
+        class="inline-block px-8 py-3 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-colors text-lg font-medium"
+      >
+        Pesan Paket Sekarang
+      </a>
+    </div>
+  </div>
+</section>

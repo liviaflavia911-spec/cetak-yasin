@@ -1,0 +1,59 @@
+/* Mobile-friendly admin styles */
+body {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.css-2fdiau-AppHeader {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 101 !important;
+}
+
+.css-1a7zxy3-SidebarHeading {
+    position: sticky !important;
+    top: 0 !important;
+    background: white !important;
+    z-index: 100 !important;
+}
+
+.css-1f7nhiq-CollectionMain {
+    min-width: fit-content !important;
+    padding: 16px !important;
+}
+
+.css-1q2hwaq-Sidebar {
+    min-width: 250px !important;
+    border-right: 1px solid #e5e7eb !important;
+}
+
+@media (max-width: 768px) {
+    .css-1q2hwaq-Sidebar {
+        min-width: 200px !important;
+    }
+}
+
+.css-osnbqe-AppMainContainer {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+[class*="CollectionMain"],
+[class*="AppMainContainer"] {
+    margin-left: var(--sidebar-width) !important;
+    width: calc(100% - var(--sidebar-width)) !important;
+}
+
+/* Touch-friendly inputs */
+input[type="text"],
+textarea {
+    font-size: 16px !important;
+    padding: 8px !important;
+}
+
+/* Better touch targets */
+button,
+[role="button"] {
+    min-height: 44px !important;
+}

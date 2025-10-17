@@ -1,0 +1,118 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+  <div class="container mx-auto px-4">
+    <nav class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-teal-600">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+        </svg>
+        <span class="text-xl font-bold text-gray-900">CetakYasin<span class="text-teal-600">.id</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="/#features" class="text-gray-600 hover:text-teal-600 transition-colors">Keunggulan</a>
+        <a href="/#products" class="text-gray-600 hover:text-teal-600 transition-colors">Produk</a>
+        <a href="/#testimonials" class="text-gray-600 hover:text-teal-600 transition-colors">Testimoni</a>
+        <a href="/blog" class="text-gray-600 hover:text-teal-600 transition-colors">Blog</a>
+        <a href="/#contact" class="text-gray-600 hover:text-teal-600 transition-colors">Kontak</a>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="hidden md:block">
+        <a 
+          href="https://wa.me/6289519865963" 
+          class="inline-flex items-center px-4 py-2 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm.143 18.96c-1.307 0-2.607-.174-3.857-.514l-4.286 1.114 1.143-4.114c-.429-1.036-.714-2.143-.714-3.286 0-4.571 3.714-8.286 8.286-8.286 4.571 0 8.286 3.714 8.286 8.286 0 4.571-3.714 8.286-8.286 8.286zm4.857-6c-.286-.143-1.643-.857-1.929-.943-.286-.086-.429-.143-.571.143-.143.286-.571.943-.714 1.143-.143.143-.286.171-.571.029-.286-.143-1.214-.429-2.286-1.429-.857-.857-1.429-1.929-1.571-2.214-.143-.286 0-.429.143-.571.143-.143.286-.371.429-.571.143-.2.171-.343.257-.571.086-.229 0-.429-.029-.571-.029-.143-.571-1.429-.786-1.929-.214-.5-.429-.429-.571-.429-.143 0-.286 0-.429 0s-.429.057-.643.343c-.214.286-.857.857-.857 2.143s.929 2.5 1.071 2.643c.143.143 1.857 3 4.571 4.071 2.714 1.071 2.714.714 3.214.643.5-.071 1.643-.714 1.857-1.357.214-.643.214-1.214.143-1.357z"/>
+          </svg>
+          Hubungi Kami
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-button" 
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-teal-600 hover:bg-gray-100 transition-colors"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 close-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden pb-4">
+      <div class="flex flex-col space-y-4">
+        <a href="/#features" class="text-gray-600 hover:text-teal-600 transition-colors">Keunggulan</a>
+        <a href="/#products" class="text-gray-600 hover:text-teal-600 transition-colors">Produk</a>
+        <a href="/#testimonials" class="text-gray-600 hover:text-teal-600 transition-colors">Testimoni</a>
+        <a href="/blog" class="text-gray-600 hover:text-teal-600 transition-colors">Blog</a>
+        <a href="/#contact" class="text-gray-600 hover:text-teal-600 transition-colors">Kontak</a>
+        <a 
+          href="https://wa.me/6289519865963" 
+          class="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-2" viewBox="0 0 24 24">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm.143 18.96c-1.307 0-2.607-.174-3.857-.514l-4.286 1.114 1.143-4.114c-.429-1.036-.714-2.143-.714-3.286 0-4.571 3.714-8.286 8.286-8.286 4.571 0 8.286 3.714 8.286 8.286 0 4.571-3.714 8.286-8.286 8.286zm4.857-6c-.286-.143-1.643-.857-1.929-.943-.286-.086-.429-.143-.571.143-.143.286-.571.943-.714 1.143-.143.143-.286.171-.571.029-.286-.143-1.214-.429-2.286-1.429-.857-.857-1.429-1.929-1.571-2.214-.143-.286 0-.429.143-.571.143-.143.286-.371.429-.571.143-.2.171-.343.257-.571.086-.229 0-.429-.029-.571-.029-.143-.571-1.429-.786-1.929-.214-.5-.429-.429-.571-.429-.143 0-.286 0-.429 0s-.429.057-.643.343c-.214.286-.857.857-.857 2.143s.929 2.5 1.071 2.643c.143.143 1.857 3 4.571 4.071 2.714 1.071 2.714.714 3.214.643.5-.071 1.643-.714 1.857-1.357.214-.643.214-1.214.143-1.357z"/>
+          </svg>
+          Hubungi Kami
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = mobileMenuButton?.querySelector('.menu-icon');
+  const closeIcon = mobileMenuButton?.querySelector('.close-icon');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    menuIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking on links
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      menuIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    });
+  });
+
+  // Handle scroll behavior
+  let lastScroll = 0;
+  const header = document.querySelector('header');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+      header?.classList.remove('shadow-lg');
+      return;
+    }
+
+    if (currentScroll > lastScroll) {
+      // Scrolling down
+      header?.classList.add('shadow-lg');
+    } else {
+      // Scrolling up
+      header?.classList.remove('shadow-lg');
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>

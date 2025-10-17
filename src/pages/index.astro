@@ -1,13 +1,44 @@
 ---
-
+import '../styles/base.css';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Products from '../components/Products.astro';
+import Testimonials from '../components/Testimonials.astro';
+import OrderSteps from '../components/OrderSteps.astro';
+import Packages from '../components/Packages.astro';
+import Gallery from '../components/Gallery.astro';
+import CTA from '../components/CTA.astro';
+import MapsSocial from '../components/MapsSocial.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Cetak Buku Yasin Custom Berkualitas - CetakYasin.id" />
 		<meta name="generator" content={Astro.generator} />
+		<title>CetakYasin.id - Cetak Buku Yasin Custom Berkualitas</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="font-inter bg-white">
+		<Header />
+		<main>
+			<Hero />
+			<Features />
+			<Products />
+			<Testimonials />
+			<OrderSteps />
+			<Packages />
+			<CTA />
+			<Gallery />
+		</main>
+		<MapsSocial />
+		<Footer />
+	</body>
+</html>
 		<title>Astro</title>
 	</head>
 	<body>

@@ -1,0 +1,48 @@
+---
+const testimonials = [
+  {
+    name: "Ahmad",
+    message: "Alhamdulillah, kualitas cetakan bagus dan pengiriman cepat. Terima kasih CetakYasin.id 👍"
+  },
+  {
+    name: "Siti",
+    message: "Pelayanan ramah, harga terjangkau. Hasilnya memuaskan sekali 😊"
+  },
+  {
+    name: "Fahmi",
+    message: "Recommended banget! Proses cepat dan bisa custom sesuai keinginan 🙏"
+  }
+];
+---
+
+<section class="py-16 bg-white" id="testimonials">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+      Testimony Pemesanan Buku Yasin
+    </h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Apa kata pelanggan yang telah mempercayakan pencetakan buku Yasin kepada kami
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials.map(testimonial => (
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">{testimonial.name}</h3>
+              <p class="text-sm text-gray-500">Verified Customer</p>
+            </div>
+          </div>
+          <p class="text-gray-600">
+            {testimonial.message}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,68 @@
+---
+const products = [
+  {
+    title: "Kantong Tile",
+    description: "Kantong tile adalah tas kecil dari plastik atau kain yang dicetak desain atau logo.",
+    price: "Mulai Rp 2.000",
+    image: "public/images/KANTONG BUKU YASIN.webp",
+  },
+  {
+    title: "Yasin Hardcover Bludru",
+    description: "Cover tebal dan tahan lama dengan pilihan warna menarik",
+    price: "Mulai Rp 33.000",
+    image: "public/images/Yasin Hardcover Bludru.webp",
+  },
+  {
+    title: "Yasin Hardcover Gold",
+    description: "Cover tebal dan tahan lama dengan Kualitas Premium",
+    price: "Mulai Rp 33.000",
+    image: "public/images/Yasin Hardcover Gold.webp",
+  },
+  {
+    title: "Yasin Softcover",
+    description: "Kualitas terbaik dengan desain eksklusif",
+    price: "Mulai Rp 18.000",
+    image: "public/images/Yasin Softcover.webp",
+  }
+];
+---
+
+<section class="py-16 bg-gray-50" id="products">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+      Pilihan Buku Yasin
+    </h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Tersedia berbagai pilihan buku Yasin yang dapat disesuaikan dengan kebutuhan dan budget Anda
+    </p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {products.map(product => (
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <img 
+            src={product.image} 
+            alt={product.title}
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              {product.title}
+            </h3>
+            <p class="text-gray-600 text-sm mb-3">
+              {product.description}
+            </p>
+            <p class="text-teal-600 font-semibold mb-4">
+              {product.price}
+            </p>
+            <a 
+              href="https://wa.me/6289519865963"
+              class="inline-block w-full text-center px-6 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-colors"
+            >
+              Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

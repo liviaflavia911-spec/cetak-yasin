@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<section class="relative min-h-screen bg-gradient-to-br from-teal-50 to-white overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%230F766E\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+
+  <div class="container mx-auto px-4 pt-32 pb-16 relative">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div class="text-center lg:text-left">
+        <div class="mb-6 inline-block">
+          <span class="bg-teal-50 text-teal-600 py-2 px-4 rounded-full text-sm font-medium">Percetakan Buku Yasin Terpercaya</span>
+        </div>
+        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Cetak Buku Yasin Custom <span class="text-teal-600">Berkualitas</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Wujudkan buku Yasin impian Anda dengan desain eksklusif, kualitas premium, dan harga terjangkau. Proses cepat dan pelayanan profesional.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a 
+            href="https://wa.me/6289519865963"
+            class="group px-8 py-3 bg-teal-600 text-white rounded-full hover:bg-teal-700 transition-all transform hover:scale-105 duration-200 text-lg font-medium inline-flex items-center justify-center"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6 mr-2" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm.143 18.96c-1.307 0-2.607-.174-3.857-.514l-4.286 1.114 1.143-4.114c-.429-1.036-.714-2.143-.714-3.286 0-4.571 3.714-8.286 8.286-8.286 4.571 0 8.286 3.714 8.286 8.286 0 4.571-3.714 8.286-8.286 8.286zm4.857-6c-.286-.143-1.643-.857-1.929-.943-.286-.086-.429-.143-.571.143-.143.286-.571.943-.714 1.143-.143.143-.286.171-.571.029-.286-.143-1.214-.429-2.286-1.429-.857-.857-1.429-1.929-1.571-2.214-.143-.286 0-.429.143-.571.143-.143.286-.371.429-.571.143-.2.171-.343.257-.571.086-.229 0-.429-.029-.571-.029-.143-.571-1.429-.786-1.929-.214-.5-.429-.429-.571-.429-.143 0-.286 0-.429 0s-.429.057-.643.343c-.214.286-.857.857-.857 2.143s.929 2.5 1.071 2.643c.143.143 1.857 3 4.571 4.071 2.714 1.071 2.714.714 3.214.643.5-.071 1.643-.714 1.857-1.357.214-.643.214-1.214.143-1.357z"/>
+            </svg>
+            Hubungi Kami
+          </a>
+          <a 
+            href="/blog/"
+            class="px-8 py-3 bg-white text-teal-600 rounded-full border-2 border-teal-600 hover:bg-teal-50 transition-all transform hover:scale-105 duration-200 text-lg font-medium inline-flex items-center justify-center"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+            </svg>
+            Lihat Blog
+          </a>
+        </div>
+        
+        <!-- Trust Badges -->
+        <div class="mt-12 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0">
+          <div class="flex items-center justify-center lg:justify-start space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+            <div class="text-left">
+              <p class="text-sm font-semibold text-gray-900">Terpercaya</p>
+              <p class="text-xs text-gray-500">Sejak 2020</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+            </svg>
+            <div class="text-left">
+              <p class="text-sm font-semibold text-gray-900">Rating 4.9</p>
+              <p class="text-xs text-gray-500">Dari 1000+ Client</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
+            </svg>
+            <div class="text-left">
+              <p class="text-sm font-semibold text-gray-900">100% Puas</p>
+              <p class="text-xs text-gray-500">Garansi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="relative">
+        <div class="relative z-10">
+          <img 
+            src="public/images/blog/LOGO.webp" 
+            alt="Buku Yasin Custom Preview" 
+            class="w-full h-auto max-w-lg mx-auto rounded-lg shadow-2xl"
+          />
+        </div>
+        <!-- Decorative Elements -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-r from-teal-200 to-teal-100 rounded-full blur-3xl opacity-20 -z-10"></div>
+        <div class="absolute -top-4 -right-4 w-24 h-24 bg-yellow-200 rounded-full blur-2xl opacity-20"></div>
+        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-teal-200 rounded-full blur-2xl opacity-20"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave Shape Divider -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full h-auto">
+      <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+</section>

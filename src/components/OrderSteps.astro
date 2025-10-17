@@ -1,0 +1,60 @@
+---
+const steps = [
+  {
+    number: "1",
+    title: "Konsultasi",
+    description: "Hubungi kami via WhatsApp untuk konsultasi desain dan pemesanan"
+  },
+  {
+    number: "2",
+    title: "Desain",
+    description: "Pilih desain atau kirimkan desain custom sesuai keinginan"
+  },
+  {
+    number: "3",
+    title: "Pembayaran",
+    description: "Lakukan pembayaran sesuai dengan metode yang tersedia"
+  },
+  {
+    number: "4",
+    title: "Pengiriman",
+    description: "Pesanan akan diproses dan dikirim ke alamat tujuan"
+  }
+];
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+      Cara Pemesanan Buku Yasin
+    </h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Proses pemesanan yang mudah dan cepat
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map(step => (
+        <div class="relative">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 h-full">
+            <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
+              {step.number}
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              {step.title}
+            </h3>
+            <p class="text-gray-600">
+              {step.description}
+            </p>
+          </div>
+          {step.number !== "4" && (
+            <div class="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

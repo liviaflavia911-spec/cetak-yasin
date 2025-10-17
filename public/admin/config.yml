@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: liviaflavia911-spec/cetak-yasin
+  branch: main
+
+media_folder: public/images/blog
+public_folder: /images/blog
+
+collections:
+  - name: blog
+    label: Blog
+    folder: src/content/blog
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: publishedDate, widget: datetime }
+      - { label: Author, name: author, widget: string, default: "Admin CetakYasin" }
+      - { label: Featured Image, name: image, widget: image }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Body, name: body, widget: markdown }
