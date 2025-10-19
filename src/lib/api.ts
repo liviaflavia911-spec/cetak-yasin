@@ -1,76 +1,39 @@
-const STRAPI_URL = import.meta.env.PUBLIC_STRAPI_URL || 'http://localhost:1337';
+import { createClient } from '@supabase/supabase-js';
 
-export async function fetchAPI(query: string, variables = {}) {
-  const res = await fetch(`${STRAPI_URL}/graphql`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      query,
-      variables,
-    }),
-  });
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
-  const json = await res.json();
-  if (json.errors) {
-    console.error(json.errors);
-    throw new Error('Failed to fetch API');
-  }
-
-  return json.data;
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Missing Supabase environment variables');
 }
 
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
 export async function getAllPosts() {
-  const data = await fetchAPI(`
-    query Posts {
-      posts {
-        data {
-          id
-          attributes {
-            title
-            slug
-            excerpt
-            content
-            coverImage {
-              data {
-                attributes {
-                  url
-                }
-              }
-            }
-            publishedAt
-          }
-        }
-      }
-    }
-  `);
-  return data?.posts?.data;
+  const { data, error } = await supabase
+    .from('posts')
+    .select('id, title, slug, excerpt, content, cover_image_url, published_at')
+    .order('published_at', { ascending: false });
+
+  if (error) {
+    console.error(error);
+    throw new Error('Failed to fetch posts');
+  }
+
+  return data;
 }
 
 export async function getPostBySlug(slug: string) {
-  const data = await fetchAPI(`
-    query PostBySlug($slug: String!) {
-      posts(filters: { slug: { eq: $slug } }) {
-        data {
-          id
-          attributes {
-            title
-            slug
-            content
-            excerpt
-            coverImage {
-              data {
-                attributes {
-                  url
-                }
-              }
-            }
-            publishedAt
-          }
-        }
-      }
-    }
-  `, { slug });
-  return data?.posts?.data[0];
+  const { data, error } = await supabase
+    .from('posts')
+    .select('id, title, slug, excerpt, content, cover_image_url, published_at')
+    .eq('slug', slug)
+    .single();
+
+  if (error) {
+    console.error(error);
+    throw new Error('Failed to fetch post');
+  }
+
+  return data;
 }

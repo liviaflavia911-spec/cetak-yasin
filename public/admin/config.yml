@@ -3,8 +3,7 @@ backend:
   repo: liviaflavia911-spec/cetak-yasin
   branch: main
   auth_type: implicit
-  app_id: YOUR_GITHUB_OAUTH_APP_CLIENT_ID
-  base_url: https://cetak-yasin.pages.dev/admin/
+  app_id: 0v23liuwt5js9UgpjPl6
 
 media_folder: "public/images/blog"
 public_folder: "/images/blog"

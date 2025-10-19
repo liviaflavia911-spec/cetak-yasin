@@ -10,9 +10,12 @@
     "cms": "netlify-cms-proxy-server"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.0",
     "@astrojs/tailwind": "^5.0.0",
+    "@supabase/supabase-js": "^2.75.1",
     "astro": "^3.0.0",
-    "netlify-cms-app": "^2.15.72",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sharp": "^0.34.4",
     "tailwindcss": "^3.0.24",
     "tslib": "^2.8.1",
