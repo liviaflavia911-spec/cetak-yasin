@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: liviaflavia911-spec/cetak-yasin
   branch: main
 
 media_folder: "public/images/blog"
