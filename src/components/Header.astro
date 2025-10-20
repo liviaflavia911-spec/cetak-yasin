@@ -72,47 +72,53 @@ import { Image } from 'astro:assets';
 </header>
 
 <script>
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = mobileMenuButton?.querySelector('.menu-icon');
-  const closeIcon = mobileMenuButton?.querySelector('.close-icon');
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
 
-  mobileMenuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
-    menuIcon?.classList.toggle('hidden');
-    closeIcon?.classList.toggle('hidden');
-  });
+    if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
 
-  // Close mobile menu when clicking on links
-  const mobileLinks = mobileMenu?.querySelectorAll('a');
-  mobileLinks?.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu?.classList.add('hidden');
-      menuIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
-    });
-  });
-
-  // Handle scroll behavior
-  let lastScroll = 0;
-  const header = document.querySelector('header');
-
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll <= 0) {
-      header?.classList.remove('shadow-lg');
-      return;
+      // Close mobile menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
     }
 
-    if (currentScroll > lastScroll) {
-      // Scrolling down
-      header?.classList.add('shadow-lg');
-    } else {
-      // Scrolling up
-      header?.classList.remove('shadow-lg');
-    }
+    // Handle scroll behavior
+    let lastScroll = 0;
+    const header = document.querySelector('header');
 
-    lastScroll = currentScroll;
+    if (header) {
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 0) {
+          header.classList.remove('shadow-lg');
+          return;
+        }
+
+        if (currentScroll > lastScroll) {
+          // Scrolling down
+          header.classList.add('shadow-lg');
+        } else {
+          // Scrolling up
+          header.classList.remove('shadow-lg');
+        }
+
+        lastScroll = currentScroll;
+      });
+    }
   });
 </script>
